@@ -1,0 +1,35 @@
+<p style="color: red"><%= notice %></p>
+
+<center><h1>Astuces</h1></center>
+
+<!-- <ul>
+<% if user_signed_in? %>
+  <li><%= current_user.email %></li>
+  <li><%= link_to "sign out", destroy_user_session_path(@user), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Es-tu sûr(e)?"
+                  } %></li>
+
+<% else %>
+<li><%= link_to "sign_in", new_user_session_path %></li>
+<li><%= link_to "sign_up", new_user_registration_path %></li>
+<% end %>
+</ul> -->
+
+<p><%=link_to "Nouvelle astuce", new_post_path%></p>
+
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <h2><%= link_to post.title, post %></h2>
+    <p>by : <%=link_to post.user_was, post.user %></p>
+    <%= link_to "Modifier", edit_post_path(post) %>
+    <%= link_to "Supprimer", post_path(post), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Es-tu sûr(e)?"
+    } %></li>
+
+      <%= link_to "Voir cette astuce", post %>
+    </p>
+  <% end %>
+</div>

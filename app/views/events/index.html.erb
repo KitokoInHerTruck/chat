@@ -1,0 +1,15 @@
+<p style="color: red"><%= notice %></p>
+
+<center><h1>Concours</h1></center>
+
+<div id="events">
+  <% @events.each do |event| %>
+    <%= render event %>
+    <p>
+      <%= link_to "Voir ce concours", event %>
+      <%= link_to "Revenir auc concours", events_path %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "créer un concours", new_event_path %>

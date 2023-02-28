@@ -1,0 +1,10 @@
+<h1>Organiser un concours</h1>
+
+<%= render "form", event: @event %>
+
+<br>
+
+<div>
+  <%= link_to "Voir ce concours", @event %> |
+  <%= link_to "Revenir aux concours", events_path %>
+</div>

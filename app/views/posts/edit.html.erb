@@ -1,0 +1,10 @@
+<h1>Écris ton astuce</h1>
+
+<%= render "form", post: @post %>
+
+<br>
+
+<div>
+  <%= link_to "Regarde cette astuce", @post %> |
+  <%= link_to "Retourne aux autres astuces", posts_path %>
+</div>

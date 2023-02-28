@@ -1,0 +1,10 @@
+<p style="color: red"><%= notice %></p>
+
+<%= render @event %>
+
+<div>
+  <%= link_to "Modifier ce concours", edit_event_path(@event) %> |
+  <%= link_to "Revenir aux concours", events_path %>
+
+  <%= button_to "Supprimer ce concours", @event, method: :delete %>
+</div>
