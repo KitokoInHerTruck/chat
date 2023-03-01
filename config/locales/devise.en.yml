@@ -14,7 +14,7 @@ en:
       last_attempt: "Encore une tentative avant que ton compte soit bloqué."
       not_found_in_database: "Tu n'es pas dans la base de données."
       timeout: "Ta session a expirée, reconnecte toi !"
-      unauthenticated: "Tu dois t'nscrire ou te connecter pour continuer."
+      unauthenticated: "Tu dois t'inscrire ou te connecter pour continuer."
       unconfirmed: "Tu dois confirmer ton mail avant de continuer."
     mailer:
       confirmation_instructions:
@@ -46,7 +46,7 @@ en:
       updated: "Ton compte a été mis à jour avec succès.."
       updated_but_not_signed_in: "Ton compte a été mis à jour avec succès, mais depuis que ton mot de passe a été modifié, tu dois te reconnecter."
     sessions:
-      signed_in: "Connexon réussie."
+      signed_in: "Connexion réussie."
       signed_out: "Déconnexion réussie."
       already_signed_out: "Déconnexion réussie."
     unlocks:

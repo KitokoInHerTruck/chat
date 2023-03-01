@@ -14,9 +14,9 @@ User.destroy_all
     # country = Faker::Address.country
     User.create!(
         first_name: Faker::Movies::HarryPotter.character,
-        # last_name: last_name,
-        # age: rand(18..70),
-        # country: country,
+        last_name: "JEREMY",
+        age: rand(18..70),
+        country: "Marseille",
         email: Faker::Internet.email,
         password: Faker::Internet.password(min_length: 8)
         # password_confirmation: password 

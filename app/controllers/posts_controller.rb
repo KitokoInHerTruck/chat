@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [ :show, :edit, :update, :destroy ]
-  before_action :authenticate_user!, only: [ :new, :create, :edit, :update, :destroy ]
-  before_action :set_new_post, only: [:new]
+  before_action :authenticate_user!
 
   # GET /posts or /posts.json
   def index
@@ -10,7 +9,6 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
-    @post = Post.find(params[:id])
   end
 
   # GET /posts/new
@@ -25,6 +23,7 @@ class PostsController < ApplicationController
   # POST /posts or /posts.json
   def create
     @post = current_user.posts.build(post_params)
+    @post.user = current_user
      
 
     respond_to do |format|
@@ -69,11 +68,6 @@ class PostsController < ApplicationController
     def set_post
       @post = Post.find(params[:id])
     end
-
-    def set_new_post
-      @post = Post.new
-    end
-
 
     # Only allow a list of trusted parameters through.
     def post_params

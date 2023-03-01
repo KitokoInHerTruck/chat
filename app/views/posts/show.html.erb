@@ -1,14 +1,12 @@
-<p style="color: red"><%= notice %></p>
-
 <!-- <%= render @post %> -->
 
-<center><h1>Astuces</h1></center>
+<center><h1>Astuces n°<%= @post.id %></h1></center>
 
-<center><h1><%= @post.title %> n°<%= @post.id %></h2></center>
+<center><h1><%= @post.title %></h2></center>
 
-<h4><p><%= @post.content %></p></h4>
-<center><li><p>Créé le <%= @post.created_at %></p></li>
-<li><p>Créé par <%= @post.user.first_name.nil? ? @post.user.email : "#{@post.user.first_name} #{@post.user.last_name}" %></p></li></center>
+<center><h4><p><%= @post.content %></p></h4></center>
+<li><p>Créé le <%= @post.created_at %></p></li>
+<li><p>Créé par <%= @post.user.first_name.nil? ? @post.user.email : "#{@post.user.first_name} #{@post.user.last_name}" %></p></li>
 
 
 <div><center>
