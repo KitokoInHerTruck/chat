@@ -1,19 +1,19 @@
 <p style="color: red"><%= notice %></p>
 
-<%= render @post %>
+<!-- <%= render @post %> -->
 
 <center><h1>Astuces</h1></center>
 
-<h1><%= @post.title %> n°<%= @post.id %></h2>
+<center><h1><%= @post.title %> n°<%= @post.id %></h2></center>
 
-<p><%= @post.content %></p>
-<p>Créé le <%= @post.created_at %></p>
-<p>Créé par <%= @post.user.first_name.nil? ? post.user.email : "#{post.user.first_name} #{post.user.last_name}" %></p>
+<h4><p><%= @post.content %></p></h4>
+<center><li><p>Créé le <%= @post.created_at %></p></li>
+<li><p>Créé par <%= @post.user.first_name.nil? ? @post.user.email : "#{@post.user.first_name} #{@post.user.last_name}" %></p></li></center>
 
 
-<div>
+<div><center>
   <%= button_to "Modifier cette astuce", edit_post_path(@post) %>
   <%= button_to "Supprimer cette astuce", @post, method: :delete %>
   <%= link_to "Retourner aux astuces", posts_path %>
   <%= link_to "Retourner à l'accueil", root_path %>
-</div>
+</div></center>
